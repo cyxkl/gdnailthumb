@@ -65,7 +65,7 @@ body {
         border-radius: 10px;
     }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
@@ -181,21 +181,21 @@ h1 {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     .gallery .image {
         width: calc(100% / 3);
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .gallery .image {
         width: calc(100% / 2);
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
     .wrapper nav .items {
-        max-width: 400px;
+        max-width: 600px;
     }
 
     nav .items span {
@@ -203,7 +203,7 @@ h1 {
     }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 500px) {
     .wrapper {
         margin: 30px auto;
     }
