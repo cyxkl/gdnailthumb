@@ -9,23 +9,34 @@
     <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
-    <nav class="navbar">
-        <div class="brand-title">GDThumb</div>
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </a>
-        <div class="navbar-links">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contacts.html">Contacts</a></li>
-                <li><a href="updates.html">Updates</a></li>
-            </ul>
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="logo">
+                    <a href="index.html">GDThumb</a>
+                </div>
+                <input type="checkbox" id="nav-check">
+                <label for="nav-check" class="nav-toggler">
+                    <span></span>
+                </label>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contacts.html">Contacts</a></li>
+                        <li><a href="updates.html">Updates</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-    </nav>
-    <h1>Updates</h1>
+    </header>
+    <h1><u>Updates</u></h1>
+    <p class="update">04/23/21 - Hey look, it's releade day. Ok for reals, nothing much happened. I just made an update to the home page where there's a button that directly leads you to the gallery (inspiration from pointercrate). Also added underlines to most of the "upper text" (as you can see from the Update title) since I thought it'd look cool.</p>
+    <p class="update">04/22/21 - Quite a huge update for this day. I've restyled the entire ui to make it more user-friendly since the other one was quite small and "unfitting" for the website's theming.</p>
+    <p class="update">for context (old ui)</p>
+    <div class="imgCenterer">
+        <img src="images/old_ui.png" />
+    </div>
     <p class="update">04/21/21 - Holy shit, a lot was done for this day. Thumbnails for Innards, Black Blizzard, and Allegiance have now been added. I've also added a feature where you can now download any image by tapping/clicking on it. Now, recent thumbnails appear first instead of having everything in a skewed order. Oh, I've added things on the Home and Contacts pages so they can also have text inside them.</p>
     <p class="update">04/20/21 - This is where everything started, from the interface all to the gallery itself. Was able to get this site up and running on github pages so yeah.</p>
 </body>

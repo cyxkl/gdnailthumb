@@ -9,23 +9,28 @@
     <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
-    <nav class="navbar">
-        <div class="brand-title">GDThumb</div>
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </a>
-        <div class="navbar-links">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contacts.html">Contacts</a></li>
-                <li><a href="updates.html">Updates</a></li>
-            </ul>
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="logo">
+                    <a href="index.html">GDThumb</a>
+                </div>
+                <input type="checkbox" id="nav-check">
+                <label for="nav-check" class="nav-toggler">
+                    <span></span>
+                </label>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contacts.html">Contacts</a></li>
+                        <li><a href="updates.html">Updates</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-    </nav>
-    <h1>Gallery</h1>
+    </header>
+    <h1><u>Gallery</u></h1>
     <p class="galDesc">FYI: You can tap/click on each of the images to download them</p>
     <div class="wrapper">
         <nav>
@@ -36,8 +41,6 @@
                 <span class="item" data-name="hard">Hard</span>
             </div>
         </nav>
-        <!--search box-->
-
         <!--images-->
         <div class="gallery">
             <div class="image" data-name="extreme"><span><a href="images/allegiance.jpg" download><img src="images/allegiance.jpg" alt="" /></a></span></div>

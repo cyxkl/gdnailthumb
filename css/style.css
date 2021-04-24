@@ -1,105 +1,174 @@
-﻿* {
-    box-sizing: border-box;
+﻿:root {
+    --color-1: #673ab7;
 }
 
 body {
+    line-height: 1.5;
+    font-family: 'Comfortaa', cursive;
+    background-color: white;
+}
+
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Comfortaa', cursive;
 }
 
-.navbar {
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
     display: flex;
-    position: relative;
-    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.align-items-center {
     align-items: center;
-    background-color: #333;
-    color: white;
 }
 
-.brand-title {
-    font-size: 1.5rem;
-    margin: .5rem;
-}
-
-.navbar-links {
-    height: 100%;
-}
-
-    .navbar-links ul {
-        display: flex;
-        margin: 0;
-        padding: 0;
-    }
-
-    .navbar-links li {
-        list-style: none;
-    }
-
-        .navbar-links li a {
-            display: block;
-            text-decoration: none;
-            color: white;
-            padding: 1rem;
-        }
-
-        .navbar-links li:hover {
-            background-color: #555;
-        }
-
-.toggle-button {
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
+.justify-content-between {
     justify-content: space-between;
-    width: 30px;
-    height: 21px;
+}
+/*header*/
+.header {
+    background-color: #007bff;
+    padding: 12px 0;
+    position: relative;
 }
 
-    .toggle-button .bar {
-        height: 3px;
-        width: 100%;
-        background-color: white;
-        border-radius: 10px;
+    .header .logo,
+    .header .nav {
+        padding: 0 15px;
     }
 
-@media (max-width: 1000px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .toggle-button {
-        display: flex;
-    }
-
-    .navbar-links {
-        display: none;
-        width: 100%;
-    }
-
-        .navbar-links ul {
-            width: 100%;
-            flex-direction: column;
+        .header .logo a {
+            font-size: 30px;
+            color: #ffffff;
+            text-transform: capitalize;
         }
 
-            .navbar-links ul li {
-                text-align: center;
+        .header .nav ul li {
+            display: inline-block;
+            margin-left: 40px;
+        }
+
+            .header .nav ul li a {
+                display: block;
+                font-size: 16px;
+                padding: 10px 0;
+                color: white;
+                text-transform: capitalize;
+                transition: all 0.5s ease;
             }
 
-                .navbar-links ul li a {
-                    padding: .5rem 1rem;
+                .header .nav ul li a:hover {
+                    color: gray;
                 }
 
-        .navbar-links.active {
-            display: flex;
+    .header #nav-check {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+.nav-toggler {
+    height: 34px;
+    width: 44px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+    .nav-toggler span {
+        display: block;
+        height: 2px;
+        width: 20px;
+        background-color: #007bff;
+        position: relative;
+    }
+
+        .nav-toggler span::before,
+        .nav-toggler span::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #007bff;
+            left: 0;
+        }
+
+        .nav-toggler span::before {
+            top: -6px;
+        }
+
+        .nav-toggler span::after {
+            top: 6px;
+        }
+
+@media(max-width: 991px) {
+    .nav-toggler {
+        display: flex;
+    }
+
+    .header .nav {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        background-color: #005ec2;
+        border-top: 1px solid white;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+        .header .nav ul li {
+            display: block;
+            margin: 0;
+        }
+
+    .header #nav-check:checked ~ .nav {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .header #nav-check:focus ~ .nav-toggler {
+        box-shadow: 0 0 15px #000000;
+    }
+
+    .header #nav-check:checked ~ .nav-toggler span {
+        background-color: transparent;
+    }
+
+        .header #nav-check:checked ~ .nav-toggler span::before {
+            top: 0;
+            transform: rotate(45deg);
+        }
+
+        .header #nav-check:checked ~ .nav-toggler span::after {
+            top: 0;
+            transform: rotate(-45deg);
         }
 }
+
+
 
 h1 {
     text-align: center;
+    padding-top: 20px;
 }
 
 .wrapper {
@@ -253,4 +322,44 @@ h1 {
     text-align: center;
     padding: 20px 30px;
     font-size: 12px;
+}
+
+.checkButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.checker {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 20px 48px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform .2s;
+}
+.checker:hover {
+    transform: scale(1.2);
+}
+
+.arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 4.8px;
+}
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.imgCenterer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
